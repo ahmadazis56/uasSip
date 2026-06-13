@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kelola Wisata - Admin Desa Selelos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#1b6b51",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#8bd6b6",
+                    "on-surface": "#111c2d",
+                    "on-secondary-fixed": "#001e2f",
+                    "tertiary-container": "#4a564f",
+                    "on-secondary-container": "#004666",
+                    "outline": "#6f7973",
+                    "inverse-surface": "#263143",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed": "#d9e6dd",
+                    "tertiary-fixed-dim": "#bdcac1",
+                    "on-primary-fixed": "#002116",
+                    "background": "#f9f9ff",
+                    "on-tertiary-fixed": "#131e19",
+                    "surface-container": "#e7eeff",
+                    "outline-variant": "#bec9c2",
+                    "primary-container": "#065f46",
+                    "primary": "#004532",
+                    "inverse-primary": "#8bd6b6",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#ecf1ff",
+                    "on-primary-fixed-variant": "#00513b",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#d8e3fb",
+                    "secondary": "#006591",
+                    "tertiary": "#333f39",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "on-primary-container": "#8bd6b7",
+                    "secondary-container": "#39b8fd",
+                    "on-surface-variant": "#3f4944",
+                    "surface-dim": "#cfdaf2",
+                    "on-tertiary-fixed-variant": "#3e4943",
+                    "secondary-fixed": "#c9e6ff",
+                    "surface-container-highest": "#d8e3fb",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#dee8ff",
+                    "on-tertiary-container": "#becac2",
+                    "primary-fixed": "#a6f2d1",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary-fixed-dim": "#89ceff",
+                    "on-background": "#111c2d",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "40px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "caption": ["Plus Jakarta Sans"],
+                    "body-main": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md-mobile": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface flex overflow-hidden h-screen">
+<!-- Navigation Drawer (SideNav) -->
+<aside class="hidden lg:flex flex-col sticky top-0 left-0 h-screen h-screen w-64 border-r border-outline-variant bg-surface-container-low dark:bg-inverse-surface">
+<div class="p-6 flex flex-col gap-2">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-primary-container flex items-center justify-center">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="A professional studio portrait of a modern Indonesian male administrator with a friendly expression. He is wearing a clean, professional dark green polo shirt that matches the village branding. The background is a soft-focus office interior with plants, creating an atmosphere of dependable leadership and organized efficiency." src="https://lh3.googleusercontent.com/aida/AP1WRLu7IZSjrcJD_1IU6ieEuCmNvsz6XO81q0chXyTctLRFeogJFRYct0RdKyBEitG4ovEs1uNuYJOQ2AjZuha9kNt8BKFi22nZRJUNYhM4dm2TRycR_tre0DTSVrzTbSyQpUdYY0ZCoOW_JvgsBEhxbja1rLkXYp3OYkQRXjFEVHoDdwcVZo6OZ0q1ZqjMkR8LSljo-9b7Tq8RQOu7RMZw4nu0OJgnbntS9zdQj3cmfd3Oo9iESQHbLviFXqk"/>
+</div>
+<div>
+<h2 class="font-label-bold text-label-bold text-primary">Admin Selelos</h2>
+<p class="font-caption text-caption text-on-surface-variant">Administrator System</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-main text-body-main">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 bg-secondary-container text-on-secondary-container font-bold rounded-lg mx-3 px-4 py-2 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="edit_location">edit_location</span>
+<span class="font-body-main text-body-main">Kelola Wisata</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="collections">collections</span>
+<span class="font-body-main text-body-main">Kelola Galeri</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+<span class="font-body-main text-body-main">Kelola Berita</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-main text-body-main">Profil Desa</span>
+</a>
+<div class="mt-auto pt-8">
+<a class="flex items-center gap-3 text-error px-4 py-2 mx-3 hover:bg-error-container/30 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-main text-body-main">Keluar</span>
+</a>
+</div>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 lg:static">
+<div class="flex items-center gap-4">
+<button class="lg:hidden material-symbols-outlined text-primary p-2 active:scale-95 duration-150" data-icon="menu">menu</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-inverse-primary tracking-tight md:text-title-lg md:font-title-lg">Desa Selelos</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-primary-container/10 p-2 rounded-full transition-colors" data-icon="notifications">notifications</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary">
+<img alt="Admin Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvWRYvhBW9NoGRukNo79EbHoG7_Jqdq60WRlYMk1aZuEpaEaxbibXWcmcPY46S9i1dsvWdJeuEdEnOpH90jcI8c7VrfMkk_uAB00uuAIN6nMfEMXJk1G686dQdHipL_zxIZij1iRUl-_whZCNg11lkoqYMy4fcCnQ1xfyM7r3w9MaJWzUPWEUVHg-yO2-9IUPR5Dmi3bBHSEdqgFEwyayo3Xofvo5iTN2Y1jVrK8qfqAUefKMAwQHMolQ"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<section class="flex-1 overflow-y-auto p-margin-mobile md:p-margin-desktop">
+<div class="max-w-container-max mx-auto mt-16 lg:mt-0">
+<!-- Header Actions -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-gutter mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-1">Kelola Wisata</h2>
+<p class="font-body-main text-body-main text-on-surface-variant">Manajemen destinasi dan objek wisata Desa Selelos.</p>
+</div>
+<button class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-label-bold text-label-bold shadow-sm hover:bg-primary-container transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                        Tambah Wisata
+                    </button>
+</div>
+<!-- Table Container -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<!-- Search & Filter Bar -->
+<div class="p-4 border-b border-outline-variant bg-white flex flex-col md:flex-row gap-4">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary-container focus:outline-none bg-surface text-body-main" placeholder="Cari nama wisata..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded-lg hover:bg-surface-variant transition-colors text-label-bold font-label-bold">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                                Filter
+                            </button>
+<button class="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded-lg hover:bg-surface-variant transition-colors text-label-bold font-label-bold">
+<span class="material-symbols-outlined" data-icon="sort">sort</span>
+                                Urutkan
+                            </button>
+</div>
+</div>
+<!-- Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant border-b border-outline-variant">
+<th class="px-6 py-4 font-label-bold text-label-bold">Wisata</th>
+<th class="px-6 py-4 font-label-bold text-label-bold">Kategori</th>
+<th class="px-6 py-4 font-label-bold text-label-bold">Status</th>
+<th class="px-6 py-4 font-label-bold text-label-bold">Harga</th>
+<th class="px-6 py-4 font-label-bold text-label-bold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 shadow-sm border border-outline-variant">
+<img alt="Air Terjun Selelos" class="w-full h-full object-cover" data-alt="A cinematic, high-resolution photograph of the majestic Selelos Waterfall in the heart of a lush Indonesian jungle. The water cascades down a dark, textured cliff face into a turquoise pool, surrounded by vibrant ferns and towering tropical trees. Sunlight filters through the canopy, creating a misty, magical atmosphere with ethereal light rays. The colors are dominated by deep greens and crystalline blues, reflecting a tranquil and adventurous spirit." src="https://lh3.googleusercontent.com/aida/AP1WRLv7i62eQrS8acbKpTd0zbS-tJaM1k7AMFDpAJ8O2UV0kqq-LZsDU_Pfpu_LQ4wzxwdLsIy3E5CB7H7hP6Gf57OHzW0wqQl9K18GISC2ieKajj-cyelaHet4FurRY90GLQs-zX4LWcxn915fckyirnQCoXgY60eSy7jABeOGTBw_AXJnybUPqD7VkllYwsUEghhSnYVzHVAifcCZB-fZb2UKs8XYzUh2KzykrjwceRk5rHzCLwS284YEyy8"/>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Air Terjun Selelos</h3>
+<p class="font-caption text-caption text-on-surface-variant">Lombok Utara, NTB</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-primary-container/10 text-primary rounded-full font-caption text-caption">Alam</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="font-body-main text-body-main">Aktif</span>
+</div>
+</td>
+<td class="px-6 py-4 font-body-main text-body-main">Rp 15.000</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-secondary hover:bg-secondary-container/20 rounded-lg transition-all" title="Ubah">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-all" title="Hapus">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 shadow-sm border border-outline-variant">
+<img alt="Hutan Pinus Desa" class="w-full h-full object-cover" data-alt="A serene landscape of a pine forest at dawn in the tropical highlands of Indonesia. The scene is filled with tall, slender pine trees silhouetted against a soft, golden sunrise. A light morning fog drifts between the trunks, creating a sense of depth and tranquility. The ground is covered in a soft carpet of pine needles and small wildflowers. The lighting is warm and diffused, evoking a crystalline and dependable natural environment." src="https://lh3.googleusercontent.com/aida/AP1WRLsBXbCMbvvs6dQ9NZibl0yI3MOooHvn1UcdvRoo2WconiJ4lnq7qVfZb_Meh4g3AErDADM8iicg1a1ZBgiVBpy1DfAVh4lnWp6XRhimY8m410umqd18bw3y31UsxTzSdqvTJlKezOA4GNjxfM1VUw2QtPWf3K2ZErPmvnT51ktbcP5Cbmoevi0DYYIgBOUkUCtjryNQcba2ddMAcMk6QSgaUPtH9uxEgufKx-57jAtLObl5Jxg9CdWN5A"/>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Hutan Pinus Selelos</h3>
+<p class="font-caption text-caption text-on-surface-variant">Kawasan Konservasi</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-secondary-container/10 text-secondary rounded-full font-caption text-caption">Edukasi</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="font-body-main text-body-main">Aktif</span>
+</div>
+</td>
+<td class="px-6 py-4 font-body-main text-body-main">Gratis</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-secondary hover:bg-secondary-container/20 rounded-lg transition-all" title="Ubah">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-all" title="Hapus">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors group">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 shadow-sm border border-outline-variant">
+<img alt="Kebun Kopi Lokal" class="w-full h-full object-cover" data-alt="An expansive, sun-drenched coffee plantation in the highlands of Desa Selelos. The neatly organized rows of coffee bushes are loaded with red coffee berries, set against a backdrop of distant, blue-tinted mountains. The lighting is high-key and bright, representing a clean, modern digital aesthetic. Farmers are subtly visible in the distance, adding a human element of community and productivity. The atmosphere is professional, fresh, and welcoming." src="https://lh3.googleusercontent.com/aida/AP1WRLtkQ9bHfxvnyillqrOwONk90Ic3Asdw1dy7-Dn9DLvnC6DgujuYaKnImfFTABilwfFWsIkLcTcWEms40R-XHjmNuhbXMr4nN9zP6QBHyT-CuMxghOEk3Gbd2i1H6htgQX6Vb315CURKiEkZVnH0HjiwGnCQWRFsSl8SaeqXRG83f_8UU4V1-uw25LY5MVJLc9jH-9nJuvl4OSAQr25GfR7ea80G6eoxsL315m22qp8AeBWWgVirdpC6cAY"/>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface">Agrowisata Kopi</h3>
+<p class="font-caption text-caption text-on-surface-variant">Kebun Rakyat</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-tertiary-fixed text-tertiary rounded-full font-caption text-caption">Kuliner</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-error"></div>
+<span class="font-body-main text-body-main text-error">Nonaktif</span>
+</div>
+</td>
+<td class="px-6 py-4 font-body-main text-body-main">Rp 25.000</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-secondary hover:bg-secondary-container/20 rounded-lg transition-all" title="Ubah">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-all" title="Hapus">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-4 border-t border-outline-variant bg-surface-container-low flex items-center justify-between">
+<p class="font-caption text-caption text-on-surface-variant">Menampilkan 3 dari 12 objek wisata</p>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-white transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-label-bold font-label-bold">1</button>
+<button class="px-4 py-2 border border-outline-variant rounded-lg hover:bg-white transition-colors text-label-bold font-label-bold">2</button>
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant mt-auto">
+<div class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="col-span-1">
+<h4 class="font-title-lg text-title-lg text-primary mb-4">Desa Wisata Selelos</h4>
+<p class="font-caption text-caption text-on-surface-variant max-w-xs">
+                        Portal administrasi resmi untuk pengelolaan konten destinasi wisata Desa Selelos. Jaga keaslian dan kualitas informasi untuk wisatawan.
+                    </p>
+</div>
+<div class="col-span-1">
+<h5 class="font-label-bold text-label-bold text-on-surface mb-4">Pintasan</h5>
+<ul class="flex flex-col gap-2">
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Tentang Kami</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Peta Desa</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-label-bold text-label-bold text-on-surface mb-4">Kontak Dukungan</h5>
+<p class="font-caption text-caption text-on-surface-variant">support@selelos.go.id</p>
+<p class="font-caption text-caption text-on-surface-variant mt-8">© 2024 Desa Wisata Selelos. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Simple Search Simulation
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('tbody tr').forEach(row => {
+                const title = row.querySelector('h3').textContent.toLowerCase();
+                if(title.includes(query)) {
+                    row.style.display = 'table-row';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body></html>

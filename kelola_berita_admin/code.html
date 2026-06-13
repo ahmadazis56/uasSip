@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kelola Berita - Admin Desa Selelos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#1b6b51",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#8bd6b6",
+                    "on-surface": "#111c2d",
+                    "on-secondary-fixed": "#001e2f",
+                    "tertiary-container": "#4a564f",
+                    "on-secondary-container": "#004666",
+                    "outline": "#6f7973",
+                    "inverse-surface": "#263143",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed": "#d9e6dd",
+                    "tertiary-fixed-dim": "#bdcac1",
+                    "on-primary-fixed": "#002116",
+                    "background": "#f9f9ff",
+                    "on-tertiary-fixed": "#131e19",
+                    "surface-container": "#e7eeff",
+                    "outline-variant": "#bec9c2",
+                    "primary-container": "#065f46",
+                    "primary": "#004532",
+                    "inverse-primary": "#8bd6b6",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#ecf1ff",
+                    "on-primary-fixed-variant": "#00513b",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#d8e3fb",
+                    "secondary": "#006591",
+                    "tertiary": "#333f39",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "on-primary-container": "#8bd6b7",
+                    "secondary-container": "#39b8fd",
+                    "on-surface-variant": "#3f4944",
+                    "surface-dim": "#cfdaf2",
+                    "on-tertiary-fixed-variant": "#3e4943",
+                    "secondary-fixed": "#c9e6ff",
+                    "surface-container-highest": "#d8e3fb",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#dee8ff",
+                    "on-tertiary-container": "#becac2",
+                    "primary-fixed": "#a6f2d1",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary-fixed-dim": "#89ceff",
+                    "on-background": "#111c2d",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "40px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "caption": ["Plus Jakarta Sans"],
+                    "body-main": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md-mobile": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-main antialiased min-h-screen flex overflow-x-hidden">
+<!-- Navigation Drawer (Desktop Anchor) -->
+<aside class="hidden lg:flex flex-col sticky top-0 left-0 h-screen bg-surface-container-low dark:bg-inverse-surface w-64 border-r border-outline-variant duration-200">
+<div class="p-6 flex flex-col items-start gap-2">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<div>
+<h2 class="font-label-bold text-label-bold text-primary">Admin Selelos</h2>
+<p class="text-caption font-caption text-on-surface-variant">Administrator System</p>
+<span class="text-[10px] uppercase tracking-widest text-outline">v1.0</span>
+</div>
+</div>
+<nav class="flex-1 mt-4 space-y-1">
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">dashboard</span>
+<span class="font-body-main text-body-main">Dashboard</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">edit_location</span>
+<span class="font-body-main text-body-main">Kelola Wisata</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">collections</span>
+<span class="font-body-main text-body-main">Kelola Galeri</span>
+</a>
+<a class="flex items-center bg-secondary-container text-on-secondary-container font-bold rounded-lg mx-3 px-4 py-2 transition-all" href="#">
+<span class="material-symbols-outlined mr-3" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-body-main text-body-main">Kelola Berita</span>
+</a>
+<a class="flex items-center text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 hover:bg-secondary-container/30 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">settings</span>
+<span class="font-body-main text-body-main">Profil Desa</span>
+</a>
+</nav>
+<div class="p-4 border-t border-outline-variant">
+<a class="flex items-center text-error px-4 py-2 mx-3 hover:bg-error-container/20 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined mr-3">logout</span>
+<span class="font-body-main text-body-main">Keluar</span>
+</a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm border-b border-outline-variant dark:border-outline flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 lg:left-64 lg:w-[calc(100%-16rem)]">
+<div class="flex items-center gap-4">
+<button class="lg:hidden p-2 active:scale-95 duration-150 text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-title-lg text-title-lg text-primary">Kelola Berita</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex flex-col items-end">
+<span class="font-label-bold text-label-bold text-on-surface">Admin Selelos</span>
+<span class="text-caption font-caption text-secondary">Online</span>
+</div>
+<img alt="Admin" class="w-10 h-10 rounded-full border-2 border-primary-fixed shadow-sm" data-alt="A professional close-up portrait of a Southeast Asian male administrator in a clean office setting. He is smiling warmly, representing the welcoming and dependable spirit of the Selelos village management. The lighting is soft and high-key, maintaining a professional corporate aesthetic with high clarity and a soft blurred background of a modern office space." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="mt-16 p-margin-mobile md:p-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Page Header Actions -->
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+<div>
+<nav class="flex items-center gap-2 text-caption font-caption text-on-surface-variant mb-2">
+<a class="hover:text-primary" href="#">Dashboard</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Kelola Berita</span>
+</nav>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Daftar Berita Desa</h2>
+<p class="text-body-main font-body-main text-on-surface-variant mt-1">Publikasikan informasi terbaru dan kegiatan desa kepada masyarakat.</p>
+</div>
+<button class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-label-bold text-label-bold hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md active:scale-95 duration-150">
+<span class="material-symbols-outlined">add</span>
+                    Tambah Berita
+                </button>
+</div>
+<!-- Stats Overview (Asymmetric Layout Hint) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-8">
+<div class="glass-panel p-6 rounded-2xl border border-outline-variant shadow-sm flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">newspaper</span>
+</div>
+<div>
+<p class="text-caption font-caption text-on-surface-variant">Total Berita</p>
+<h3 class="font-headline-md text-headline-md">24</h3>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl border border-outline-variant shadow-sm flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<div>
+<p class="text-caption font-caption text-on-surface-variant">Total Pembaca</p>
+<h3 class="font-headline-md text-headline-md">1.2k</h3>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-2xl border border-outline-variant shadow-sm flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[32px]">schedule</span>
+</div>
+<div>
+<p class="text-caption font-caption text-on-surface-variant">Terjadwal</p>
+<h3 class="font-headline-md text-headline-md">3</h3>
+</div>
+</div>
+</div>
+<!-- News List Container -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm overflow-hidden">
+<div class="p-6 border-b border-outline-variant flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none text-body-main font-body-main" placeholder="Cari judul berita atau kategori..." type="text"/>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2.5 text-label-bold font-label-bold border border-outline-variant rounded-lg flex items-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+                            Filter
+                        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead class="bg-surface-container-low border-b border-outline-variant">
+<tr>
+<th class="px-6 py-4 text-left font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Gambar &amp; Judul</th>
+<th class="px-6 py-4 text-left font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Kategori</th>
+<th class="px-6 py-4 text-left font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Tanggal</th>
+<th class="px-6 py-4 text-left font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 text-right font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- News Item 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<img class="w-16 h-12 rounded-lg object-cover shadow-sm" data-alt="A panoramic morning view of the lush, mist-covered valleys surrounding Desa Selelos. The sunrise casts a golden glow over tropical foliage and emerald green hills. The image evokes a sense of tranquility and majestic natural beauty, matching the primary green color palette of the village brand." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="max-w-xs">
+<p class="font-title-lg text-body-main font-semibold text-on-surface line-clamp-1">Festival Budaya Selelos 2024</p>
+<p class="text-caption font-caption text-on-surface-variant line-clamp-1">Persiapan menyambut ribuan wisatawan domestik.</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-caption font-label-bold">Budaya</span>
+</td>
+<td class="px-6 py-4 text-body-main font-body-main text-on-surface-variant">12 Mei 2024</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-caption font-label-bold">Published</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-secondary hover:bg-secondary-container/20 rounded-lg transition-all" title="Ubah">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-all" title="Hapus">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- News Item 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<img class="w-16 h-12 rounded-lg object-cover shadow-sm" data-alt="A stunning waterfall hidden within a dense tropical rainforest near Selelos. Crystal clear water cascades down moss-covered rocks into a turquoise pool. The lighting is dappled, filtering through the thick canopy above, creating an atmosphere of adventure and serene discovery in a crystalline style." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="max-w-xs">
+<p class="font-title-lg text-body-main font-semibold text-on-surface line-clamp-1">Penemuan Spot Air Terjun Baru</p>
+<p class="text-caption font-caption text-on-surface-variant line-clamp-1">Tim pemetaan menemukan akses jalan baru ke hulu sungai.</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-caption font-label-bold">Wisata</span>
+</td>
+<td class="px-6 py-4 text-body-main font-body-main text-on-surface-variant">10 Mei 2024</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-caption font-label-bold">Published</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-secondary hover:bg-secondary-container/20 rounded-lg transition-all" title="Ubah">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-all" title="Hapus">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- News Item 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<img class="w-16 h-12 rounded-lg object-cover shadow-sm" data-alt="Dozens of young tropical tree saplings organized in neat rows within a wooden nursery. Sunlight highlights the vibrant green leaves of the plants. The image symbolizes growth, sustainability, and the village's commitment to reforestation and ecological tourism, with a clean and professional look." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="max-w-xs">
+<p class="font-title-lg text-body-main font-semibold text-on-surface line-clamp-1">Program Reboisasi Hutan Desa</p>
+<p class="text-caption font-caption text-on-surface-variant line-clamp-1">Penanaman 1000 bibit pohon endemik di area konservasi.</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-caption font-label-bold">Edukasi</span>
+</td>
+<td class="px-6 py-4 text-body-main font-body-main text-on-surface-variant">08 Mei 2024</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant/60">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="text-caption font-label-bold">Draft</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 text-secondary hover:bg-secondary-container/20 rounded-lg transition-all" title="Ubah">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="p-2 text-error hover:bg-error-container/20 rounded-lg transition-all" title="Hapus">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-6 bg-surface-container-low flex items-center justify-between border-t border-outline-variant">
+<p class="text-caption font-caption text-on-surface-variant">Menampilkan 1-10 dari 24 berita</p>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-primary text-on-primary rounded-lg font-label-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg hover:bg-surface-variant">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg hover:bg-surface-variant">3</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant mt-auto">
+<div class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12 grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div>
+<h2 class="font-title-lg text-title-lg text-primary mb-4">Desa Selelos</h2>
+<p class="text-caption font-caption text-on-surface-variant">Sistem Administrasi Desa Wisata Selelos. Kelola informasi dan pelayanan publik dengan mudah dan cepat dalam satu platform terintegrasi.</p>
+</div>
+<div class="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-label-bold text-primary">Navigasi</span>
+<a class="text-caption font-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Tentang Kami</a>
+<a class="text-caption font-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Peta Desa</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-label-bold text-primary">Legal</span>
+<a class="text-caption font-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-caption font-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-label-bold text-primary">Bantuan</span>
+<a class="text-caption font-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Hubungi Kami</a>
+<a class="text-caption font-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Pusat Bantuan</a>
+</div>
+</div>
+</div>
+<div class="w-full py-6 border-t border-outline-variant/30 text-center px-margin-mobile">
+<p class="text-caption font-caption text-on-surface-variant">© 2024 Desa Wisata Selelos. All rights reserved.</p>
+</div>
+</footer>
+</div>
+<!-- Mobile Navigation Suppressed (Per Destination Rule) -->
+<script>
+        // Simple logic for interactive elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const deleteButtons = document.querySelectorAll('button[title="Hapus"]');
+            deleteButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const row = e.target.closest('tr');
+                    const title = row.querySelector('.font-semibold').innerText;
+                    if(confirm(`Apakah Anda yakin ingin menghapus berita "${title}"?`)) {
+                        row.classList.add('opacity-0', 'scale-95');
+                        setTimeout(() => row.remove(), 300);
+                    }
+                });
+            });
+
+            // Smooth search simulation
+            const searchInput = document.querySelector('input[placeholder*="Cari"]');
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                const rows = document.querySelectorAll('tbody tr');
+                rows.forEach(row => {
+                    const text = row.innerText.toLowerCase();
+                    row.style.display = text.includes(term) ? '' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<body></body>

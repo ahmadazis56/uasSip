@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#1b6b51",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#8bd6b6",
+                        "on-surface": "#111c2d",
+                        "on-secondary-fixed": "#001e2f",
+                        "tertiary-container": "#4a564f",
+                        "on-secondary-container": "#004666",
+                        "outline": "#6f7973",
+                        "inverse-surface": "#263143",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed": "#d9e6dd",
+                        "tertiary-fixed-dim": "#bdcac1",
+                        "on-primary-fixed": "#002116",
+                        "background": "#f9f9ff",
+                        "on-tertiary-fixed": "#131e19",
+                        "surface-container": "#e7eeff",
+                        "outline-variant": "#bec9c2",
+                        "primary-container": "#065f46",
+                        "primary": "#004532",
+                        "inverse-primary": "#8bd6b6",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf1ff",
+                        "on-primary-fixed-variant": "#00513b",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#d8e3fb",
+                        "secondary": "#006591",
+                        "tertiary": "#333f39",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "on-primary-container": "#8bd6b7",
+                        "secondary-container": "#39b8fd",
+                        "on-surface-variant": "#3f4944",
+                        "surface-dim": "#cfdaf2",
+                        "on-tertiary-fixed-variant": "#3e4943",
+                        "secondary-fixed": "#c9e6ff",
+                        "surface-container-highest": "#d8e3fb",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#dee8ff",
+                        "on-tertiary-container": "#becac2",
+                        "primary-fixed": "#a6f2d1",
+                        "surface-container-low": "#f0f3ff",
+                        "secondary-fixed-dim": "#89ceff",
+                        "on-background": "#111c2d",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Plus Jakarta Sans"],
+                        "body-main": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md-mobile": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- Navigation Drawer (Admin Context) -->
+<aside class="hidden lg:flex flex-col sticky top-0 left-0 h-screen h-screen w-64 border-r border-outline-variant bg-surface-container-low dark:bg-inverse-surface">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+</div>
+<div>
+<h2 class="font-label-bold text-label-bold text-primary">Admin Selelos</h2>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant">Administrator System</p>
+</div>
+</div>
+<nav class="flex-1 mt-4">
+<div class="space-y-1">
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 flex items-center gap-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-main text-body-main">Dashboard</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 flex items-center gap-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">edit_location</span>
+<span class="font-body-main text-body-main">Kelola Wisata</span>
+</a>
+<a class="bg-secondary-container text-on-secondary-container font-bold rounded-lg mx-3 px-4 py-2 flex items-center gap-3 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">collections</span>
+<span class="font-body-main text-body-main">Kelola Galeri</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 flex items-center gap-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-body-main text-body-main">Kelola Berita</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant px-4 py-2 mx-3 flex items-center gap-3 hover:bg-secondary-container/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-main text-body-main">Profil Desa</span>
+</a>
+</div>
+</nav>
+<div class="p-4 border-t border-outline-variant">
+<button class="w-full flex items-center gap-3 text-error px-4 py-2 hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-bold text-label-bold">Keluar</span>
+</button>
+<p class="text-center text-[10px] mt-4 text-outline">v1.0 • Desa Selelos</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 min-w-0 flex flex-col">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 lg:relative lg:z-auto bg-surface-container-lowest dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center gap-4">
+<button class="lg:hidden p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-inverse-primary tracking-tight">Kelola Galeri</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:block text-right">
+<p class="font-label-bold text-label-bold text-on-surface">Admin Utama</p>
+<p class="text-caption text-on-surface-variant">Online</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+<img alt="Admin Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLv3TuyAKRo7upHp9aS6LHPveBkYwrO4OADcGsAZ1admZMSrqfwp2qQik_fbseF6cGmBZI4X_oNB7b6GNmSXHkH9q57cZNBGffWgTBkgFDJFcng4d3EvCzmQUV3cV6KhlRgwnQGDt6FFR7lmfko80BRnXAJloQ9vEfbVhXMe8wKi0kgpkq2pd_s47zmn-KU_rQPRXczI5lQxJ67UbyVuCu3LdJIAmeqOSovnuMdgoVPEbU8RWS8l0pLbyA"/>
+</div>
+</div>
+</header>
+<div class="pt-20 lg:pt-0 p-margin-mobile md:p-margin-desktop space-y-gutter">
+<!-- Action Header -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Daftar Foto Desa</h2>
+<p class="font-body-main text-body-main text-on-surface-variant">Kelola visual dokumentasi keindahan Desa Selelos</p>
+</div>
+<button class="flex items-center justify-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-label-bold text-label-bold shadow-md hover:brightness-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+                    Tambah Foto Baru
+                </button>
+</section>
+<!-- Filters & Search -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="md:col-span-2 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all" placeholder="Cari berdasarkan judul atau kategori..." type="text"/>
+</div>
+<select class="px-4 py-3 bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-secondary-container outline-none appearance-none cursor-pointer">
+<option>Semua Kategori</option>
+<option>Wisata Alam</option>
+<option>Budaya</option>
+<option>Kegiatan Desa</option>
+<option>Infrastruktur</option>
+</select>
+<div class="flex items-center gap-2 bg-surface-container-high rounded-xl px-4 py-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+<span class="font-label-bold text-label-bold">Terbaru</span>
+</div>
+</div>
+<!-- Photo Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-gutter">
+<!-- Gallery Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-[0px_4px_20px_rgba(6,95,70,0.08)] hover:shadow-lg transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A breathtaking panoramic shot of a hidden tropical waterfall in the lush jungles of Lombok, Indonesia. The water cascades down moss-covered rocks into a crystal-clear emerald pool. Sunlight filters through the dense canopy of ancient tropical trees, creating ethereal light rays. The overall atmosphere is peaceful, vibrant, and incredibly natural, reflecting the serene eco-tourism focus of Desa Selelos." src="https://lh3.googleusercontent.com/aida/AP1WRLsRSODXidlqWwhfnvBQuPLpWXpqoVkipPqk_XTjPtRx-usw-kJTPaE15DrapV7vokSrsUwEcpQPSFwQbKDFLHzFJYWeWxQidbmX3ufrjMho3aAbD8MB1ypbnl5fBtN4-TOp_9rrxAMtnbvXAy7qpyLAv5RlDNI_hBCE7zGXrL4CMOMKp6GZBq5nWy0IaFyH05M_6ynxBXpeaw8vfNcSYLa9Ak_2yO3fGUI1M-0Q_bg0ja_VBQKv7reBql8"/>
+</div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">Wisata Alam</span>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-primary mb-1 truncate">Air Terjun Kelambu</h3>
+<p class="text-caption text-on-surface-variant line-clamp-2 mb-4">Pemandangan air terjun yang menyerupai kelambu di tengah hutan hujan tropis.</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-4 mt-2">
+<span class="text-caption text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> 12 Okt 2023
+                            </span>
+<div class="flex gap-2">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-secondary hover:bg-secondary-container/20 transition-colors" title="Ubah">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-error-container/30 text-error hover:bg-error-container transition-colors" title="Hapus">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-[0px_4px_20px_rgba(6,95,70,0.08)] hover:shadow-lg transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A wide-angle aerial shot of a traditional Indonesian village nestled between rolling green hills and terraced rice paddies. The morning mist clings to the valley floor, creating a soft, dreamlike atmosphere. The architecture shows authentic wooden houses with tiled roofs. The lighting is warm and golden, capturing the first light of dawn. This image emphasizes the tranquil, sustainable, and culturally rich lifestyle of Desa Selelos." src="https://lh3.googleusercontent.com/aida/AP1WRLuLq_L_paA7WSSkrkHwNxyD6BUZIU7I0mUNrJnI1Soo2hnr0jBNpzm3lIeoyPxH44z8aIlTXnjESssUSI4hSOu16wSATcFJ8LsZ51ry5bs3sVbXNRxjyREdfOMRyFXfVEStdpWc2Ag9Jd27itHs3IAd6iv5vL3_hVYfeKDFAGKZM2Q1qBYIzytMzhvNaO-EnUpyujxkmE9jwYxcyoIeUmQgEZO4Qub6g_9kGYF2DxKkBrNLWLBLgiVqnxI"/>
+</div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-secondary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">Pedesaan</span>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-primary mb-1 truncate">Lembah Pagi Selelos</h3>
+<p class="text-caption text-on-surface-variant line-clamp-2 mb-4">Suasana syahdu pemukiman warga saat kabut pagi menyelimuti perbukitan.</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-4 mt-2">
+<span class="text-caption text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> 05 Okt 2023
+                            </span>
+<div class="flex gap-2">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-secondary hover:bg-secondary-container/20 transition-colors" title="Ubah">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-error-container/30 text-error hover:bg-error-container transition-colors" title="Hapus">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-[0px_4px_20px_rgba(6,95,70,0.08)] hover:shadow-lg transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up documentary style photograph of a local village craftsman carefully weaving a traditional basket from bamboo strips. The craftsman's hands are weathered and skilled, showing years of experience. The workshop is lit by warm, natural light coming through a window, highlighting the texture of the bamboo and the focused expression on the artisan's face. The mood is respectful and rich in heritage." src="https://lh3.googleusercontent.com/aida/AP1WRLtF8CmM6IrZJNa8BRcXOmexRzY6e90b6GSC868hPyyokUCQHTnkTP719UK1BhcV1EUXVuUq7RWmXP_fcGf5d8x010EWELtMUC--8J7QHbcMkubg7M-21m0YQF4A42s9M1mOidA6fz5-9Ad68HviuzUYn_n1lWYRFIva-z3OllqjWzBZcStpIQs99brD1t9yGhW11zuQ_-TUEJM7z0BxR0D8nzQgb5TmEc4dyoQwbW__op3dyCZdEgem6A"/>
+</div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-on-tertiary-fixed-variant text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">Budaya</span>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-primary mb-1 truncate">Kerajinan Bambu</h3>
+<p class="text-caption text-on-surface-variant line-clamp-2 mb-4">Proses pembuatan anyaman bambu khas warga lokal Selelos untuk cinderamata.</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-4 mt-2">
+<span class="text-caption text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> 28 Sep 2023
+                            </span>
+<div class="flex gap-2">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-secondary hover:bg-secondary-container/20 transition-colors" title="Ubah">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-error-container/30 text-error hover:bg-error-container transition-colors" title="Hapus">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Gallery Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-[0px_4px_20px_rgba(6,95,70,0.08)] hover:shadow-lg transition-all duration-300">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A majestic landscape view of mountains during a vibrant sunset. The peaks are silhouetted against a sky painted in hues of orange, purple, and deep indigo. In the foreground, alpine meadows are dotted with wild mountain flowers. The lighting is dramatic and warm, emphasizing the scale and grandeur of the natural world. This image captures the adventure and awe-inspiring beauty of high-altitude tourism." src="https://lh3.googleusercontent.com/aida/AP1WRLtWk6Ntn-ulV0S3LtGbCMqWMnj_jzWowoVay2lAvW9oG5bRHIQUjiIk8RmhuvcrKZAVfOkBuraTUaIjhyXYjCdesrh7rPS54yw325fOY1TyBAkPqiJ18gM02OeZjpmXN1tmHkwfc608sTl-3n0mvjtLGtnv7r1fCGYddTu4Idtm8x898VPLlQuUTe6r6gdjOXafZ7rESx78SODap1xG_j3YJxdKuHK3V3-3xjo-XJquyVD4hOnCfTncuC0"/>
+</div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-primary/90 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">Wisata Alam</span>
+</div>
+<div class="p-5">
+<h3 class="font-title-lg text-title-lg text-primary mb-1 truncate">Sunset Puncak Selelos</h3>
+<p class="text-caption text-on-surface-variant line-clamp-2 mb-4">Matahari terbenam yang memukau dilihat dari titik tertinggi desa.</p>
+<div class="flex items-center justify-between border-t border-outline-variant pt-4 mt-2">
+<span class="text-caption text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span> 15 Sep 2023
+                            </span>
+<div class="flex gap-2">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-secondary hover:bg-secondary-container/20 transition-colors" title="Ubah">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-error-container/30 text-error hover:bg-error-container transition-colors" title="Hapus">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-2xl p-4 mt-8">
+<p class="text-caption text-on-surface-variant hidden md:block">Menampilkan 1-4 dari 48 foto</p>
+<div class="flex items-center gap-2 mx-auto md:mx-0">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-bold text-label-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">3</button>
+<span class="mx-2 text-outline">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer (Admin Context) -->
+<footer class="mt-auto border-t border-outline-variant bg-surface-container-highest dark:bg-inverse-surface w-full py-12 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<div class="space-y-2">
+<h4 class="font-title-lg text-title-lg text-primary">Desa Selelos</h4>
+<p class="font-caption text-caption text-on-surface-variant">Sistem Manajemen Informasi Wisata Desa Terpadu.</p>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2 justify-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-caption font-caption" href="#">Dashboard</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-caption font-caption" href="#">Dokumentasi API</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-caption font-caption" href="#">Bantuan Sistem</a>
+</div>
+<div class="md:text-right">
+<p class="font-caption text-caption text-on-surface-variant">© 2024 Desa Wisata Selelos. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+<!-- Simple Feedback Toast (JS Controlled) -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+<div class="glass-panel px-6 py-3 rounded-full border border-primary/20 shadow-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-bold text-label-bold text-primary" id="toast-message">Berhasil memperbarui data</span>
+</div>
+</div>
+<script>
+        // Micro-interactions and effects
+        const deleteButtons = document.querySelectorAll('button[title="Hapus"]');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+
+        deleteButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (confirm('Apakah Anda yakin ingin menghapus foto ini? Tindakan ini tidak dapat dibatalkan.')) {
+                    showToast('Foto berhasil dihapus dari galeri');
+                    // In a real app, logic for removal from DOM would go here
+                }
+            });
+        });
+
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+
+        // Search input animation focus
+        const searchInput = document.querySelector('input[type="text"]');
+        searchInput.addEventListener('focus', () => {
+            searchInput.parentElement.classList.add('scale-[1.01]');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchInput.parentElement.classList.remove('scale-[1.01]');
+        });
+    </script>
+</body></html>

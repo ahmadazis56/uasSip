@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Desa Wisata Selelos - Keindahan Alam &amp; Budaya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#f9f9ff",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#1b6b51",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#8bd6b6",
+                      "on-surface": "#111c2d",
+                      "on-secondary-fixed": "#001e2f",
+                      "tertiary-container": "#4a564f",
+                      "on-secondary-container": "#004666",
+                      "outline": "#6f7973",
+                      "inverse-surface": "#263143",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#f9f9ff",
+                      "tertiary-fixed": "#d9e6dd",
+                      "tertiary-fixed-dim": "#bdcac1",
+                      "on-primary-fixed": "#002116",
+                      "background": "#f9f9ff",
+                      "on-tertiary-fixed": "#131e19",
+                      "surface-container": "#e7eeff",
+                      "outline-variant": "#bec9c2",
+                      "primary-container": "#065f46",
+                      "primary": "#004532",
+                      "inverse-primary": "#8bd6b6",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ecf1ff",
+                      "on-primary-fixed-variant": "#00513b",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#d8e3fb",
+                      "secondary": "#006591",
+                      "tertiary": "#333f39",
+                      "on-secondary-fixed-variant": "#004c6e",
+                      "on-primary-container": "#8bd6b7",
+                      "secondary-container": "#39b8fd",
+                      "on-surface-variant": "#3f4944",
+                      "surface-dim": "#cfdaf2",
+                      "on-tertiary-fixed-variant": "#3e4943",
+                      "secondary-fixed": "#c9e6ff",
+                      "surface-container-highest": "#d8e3fb",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#dee8ff",
+                      "on-tertiary-container": "#becac2",
+                      "primary-fixed": "#a6f2d1",
+                      "surface-container-low": "#f0f3ff",
+                      "secondary-fixed-dim": "#89ceff",
+                      "on-background": "#111c2d",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "margin-desktop": "40px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "caption": ["Plus Jakarta Sans"],
+                      "body-main": ["Plus Jakarta Sans"],
+                      "label-bold": ["Plus Jakarta Sans"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"],
+                      "headline-md-mobile": ["Plus Jakarta Sans"],
+                      "title-lg": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                      "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                      "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm border-b border-outline-variant dark:border-outline flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 transition-all duration-300" id="main-nav">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary p-2 active:scale-95 duration-150" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-inverse-primary tracking-tight">Desa Selelos</h1>
+</div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary dark:text-primary-fixed font-bold font-label-bold text-label-bold" href="#">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:bg-primary-container/10 transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#">Profil Desa</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:bg-primary-container/10 transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#">Wisata</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:bg-primary-container/10 transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#">Galeri</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:bg-primary-container/10 transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#">Berita</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container hover:bg-primary-container/10 transition-colors px-3 py-2 rounded-lg font-label-bold text-label-bold" href="#">Kontak</a>
+</nav>
+<div class="flex items-center gap-2">
+<img alt="Admin Profile" class="w-10 h-10 rounded-full border border-outline-variant object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLs08MQ2EVr1sZ709jEeox9tiaL8-x9SrZDnrY7rpuDJhVETXx0GZfQbydKEot61T9i-o-x51xQtrPuR_HCxMhJdG-dGW1Ewv7AuXTS3LVGsn2Mmn-WNOsH09G-9-NZhe9BLJq0wChKZ4NZcZ1AoUq7dfRxm1A7aCyWyGK-guShIGonUIozR8czQXU2BMN_140ysP2GYfALghq4xCz5aAAuphxliiT7XT_gYBV9Swk4BYAghirQvB3GKJqI"/>
+</div>
+</header>
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300 opacity-0" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<aside class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 rounded-r-xl bg-surface dark:bg-surface-dim shadow-lg -translate-x-full transition-transform duration-300 ease-in-out" id="nav-drawer">
+<div class="p-6 border-b border-outline-variant">
+<h2 class="font-headline-md text-headline-md text-primary">Desa Selelos</h2>
+</div>
+<nav class="flex-1 py-4">
+<a class="bg-primary-container text-on-primary-container rounded-full mx-2 px-4 py-3 flex items-center gap-4 mb-1" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-label-bold">Beranda</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all mb-1" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-label-bold text-label-bold">Profil Desa</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all mb-1" href="#">
+<span class="material-symbols-outlined">forest</span>
+<span class="font-label-bold text-label-bold">Wisata</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all mb-1" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-label-bold text-label-bold">Galeri</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all mb-1" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-label-bold text-label-bold">Berita</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all mb-1" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-label-bold text-label-bold">Kontak</span>
+</a>
+</nav>
+</aside>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A breathtaking landscape of Desa Selelos featuring rolling green hills and a majestic waterfall cascading into a crystal clear pool. The lighting is golden hour, casting a warm and welcoming glow across the lush tropical foliage. The style is professional travel photography with high contrast and deep emerald greens, aligning with the village's natural beauty and serene atmosphere." src="https://lh3.googleusercontent.com/aida/AP1WRLspsXBjetxM2bTth7qSFwFRC9AK0C2cZQKEBdy-xQkaTD3BMELu-ip38L-4feqeM9Sls5iKtquvodD9uyPFi3dBxnWu6SVcDkZJItTfFKy0LowgQTxD3mYCgv8nY5AZRtkFt3BMtFoykdxVZ6ezLQX1IDQZUGTNfrhjMYtY7K8qFqyKKTMwsOd1WTuLn_nBId9DQ5CQLARF1e05skfxf98b7Mf61Yt5nHm1bE_3kECfCKXaU20egysKPQQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop text-white">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-4 max-w-4xl tracking-tight">Selamat Datang di Desa Selelos</h1>
+<p class="font-body-main text-body-main mb-8 max-w-2xl opacity-90">Jelajahi surga tersembunyi dengan keindahan alam pegunungan, air terjun kristal, dan keramahan budaya lokal yang tak terlupakan.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 active:scale-95 transition-all shadow-lg" href="#destinasi">Jelajahi Wisata</a>
+<a class="glass-morphism px-8 py-4 rounded-full font-label-bold text-label-bold text-white hover:bg-white/20 active:scale-95 transition-all" href="#">Tonton Video Profil</a>
+</div>
+</div>
+</section>
+<!-- Destinasi Unggulan -->
+<section class="py-20 bg-surface" id="destinasi">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="text-primary font-label-bold text-label-bold uppercase tracking-widest block mb-2">Petualangan Menanti</span>
+<h2 class="font-headline-md text-headline-md">Destinasi Unggulan</h2>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary font-label-bold text-label-bold hover:gap-3 transition-all" href="#">
+                        Lihat Semua <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A massive, powerful waterfall in the heart of a lush Indonesian jungle, surrounded by ancient mossy rocks and vibrant exotic plants. Sunlight filters through the dense canopy, creating ethereal rays of light hitting the mist. The image captures the raw power and serene beauty of Selelos nature in a professional documentary style." src="https://lh3.googleusercontent.com/aida/AP1WRLutuYMOTe9jOVbOV28HxUo-eX4gjXtC9lLv62yUX8iFJi5GZ9AeGkBihvrrt8ff61y_L0G65XtXa4CFkwWU5jxh_WBWfVGBb6wxM8dR4k1tEyGNITbFJRy3fXYQX2Ra-MDtmVrirEiHXd7f6bYw3vcFkar0fvv9zcbkBbuOiPKwV_BqCzDn8c2t6KrlIPAkhRtrJZ8y7p6UBkXZgl8_391bQB3EVyCv74yNWWmxA3W1kHpg2cLXaEDe0b8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-caption font-caption w-fit mb-3">Air Terjun</span>
+<h3 class="text-white font-headline-md text-headline-md mb-2">Air Terjun Gangga</h3>
+<p class="text-white/80 font-body-main text-body-main line-clamp-2">Pesona air terjun kembar yang jatuh dari tebing tinggi di tengah hutan rimbun.</p>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="h-1/2 group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Scenic rolling hills at sunrise in Desa Selelos, with layers of morning mist settling in the valleys between peaks. The sky is a blend of soft oranges and deep purples, highlighting the emerald green of the mountain grass. A professional landscape photo that emphasizes the tranquility and high-altitude beauty of the region." src="https://lh3.googleusercontent.com/aida/AP1WRLuJn_JF8SvWNGTXJ9635IZQPoS-35Zq94Lj8jeRDuVAvlzC-O9_XbeP1pFRmWFp7NvHLQMKDDV5x_V86VXDSrS3gCdsFTO0A4v7aEPJ1-rbE7xUmAZuBVFLLg7ZwmbdFkBAnmCKkrQHskO0wX2OFg2OIrTu0T9-BRGr2xL-4usWbg_fAhyZvSpgXtK09Gpe9ADHpgJ94G80v3kGNAnd_tmZ-Ib0kR6Ab1YH8tmXym4AKYkz_ru6rEqQveo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-caption font-caption w-fit mb-2">Trekking</span>
+<h3 class="text-white font-title-lg text-title-lg">Puncak Selelos</h3>
+</div>
+</div>
+<div class="h-1/2 group relative overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Traditional Indonesian village architecture in Desa Selelos, showing a community gathering space built with bamboo and thatched roofs. The setting is integrated perfectly with the surrounding forest and durian trees. The lighting is bright and airy, reflecting a clean and modern corporate-minimalist aesthetic for cultural tourism." src="https://lh3.googleusercontent.com/aida/AP1WRLsiGHmZ_tr6A2DZq8PFBPG5Vyc5JuIHONDq7CmPGsMs3o4qSkbALvJhUfHx26VyxL2-5b1XB_iLUKSajWF07SHjCiij4dcssI_izFLoNujOoQj0crfxF2HLhVbwRGSdjNPdb1IoMdP64t2v2KjdhneGRAdfjAGoO39M-SO7D2xy5kRw7e0OfeGbTLNaUKQisvN8iPiJ1Ui6E1w-uwd0-SboIkJ_OD3E--pTD4rDNKSDNnrsJcJwaEg5LVs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-caption font-caption w-fit mb-2">Budaya</span>
+<h3 class="text-white font-title-lg text-title-lg">Kampung Adat</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Kebun Durian Lokal -->
+<section class="py-20 bg-surface-container-low overflow-hidden relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 md:order-1">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary-fixed-dim/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full aspect-square object-cover" data-alt="Close-up of a fresh, ripe durian fruit opened to reveal the creamy golden flesh, held by a local farmer in a sun-drenched orchard. The background shows blurred durian trees and the lush green landscape of Selelos. The image is vibrant and appetizing, emphasizing the premium quality of the local harvest and the crystalline tropical aesthetic." src="https://lh3.googleusercontent.com/aida/AP1WRLv3y4FB1CF55i4T3M9DYZXAjkKXEGD6lKp-M3YHzOkt7WzNflYKe84ZlkNJKpqfgbIlSQtF_bbLjRor7Ey_Zc9JSpDdawYnbRjcqpTN_XvL7oM_3hwxPruPj0IoifBuq3FhfrPS6-2D0iCDtv8gFje1oBxisjk0v8phQH-CgVkD8-03Fo1X_ncneZaQ0UjkxI6LEiB2SSX16sZq4wi_LTHpT-4lYBef7pMXZp0D6U1GErr0v9B1g5EfZZk"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="text-secondary font-label-bold text-label-bold uppercase tracking-widest block mb-4">Cita Rasa Khas</span>
+<h2 class="font-headline-md text-headline-md mb-6">Durian Lokal Selelos</h2>
+<p class="font-body-main text-body-main text-on-surface-variant mb-8">Dikenal sebagai sentra durian terbaik di wilayah ini, Desa Selelos menawarkan pengalaman "Agrowisata Durian" langsung dari pohonnya. Nikmati durian dengan tekstur creamy dan rasa manis-pahit yang otentik sambil menikmati udara pegunungan yang sejuk.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-main text-body-main">Panen Langsung di Kebun</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-main text-body-main">Varian Lokal Unggulan</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-main text-body-main">Tur Edukasi Budidaya</span>
+</li>
+</ul>
+<button class="border-2 border-primary text-primary px-8 py-3 rounded-full font-label-bold text-label-bold hover:bg-primary hover:text-white transition-all">Selengkapnya tentang Durian</button>
+</div>
+</div>
+</section>
+<!-- Berita Terbaru -->
+<section class="py-20 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md mb-4">Berita &amp; Informasi</h2>
+<p class="font-body-main text-body-main text-on-surface-variant max-w-2xl mx-auto">Pantau perkembangan terbaru, acara desa, dan tips wisata dari Desa Selelos.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- News Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col">
+<img class="w-full aspect-[16/9] object-cover" data-alt="A vibrant local community festival in Desa Selelos featuring traditional dancers in colorful costumes under a bright blue sky. The background includes modern spectators and traditional village elements, showcasing the blend of culture and tourism. The lighting is high-key and joyful, perfect for a modern corporate-minimalist news section." src="https://lh3.googleusercontent.com/aida/AP1WRLsnUvNdgs1KaL35HgXSqD8VRSZdThnJuohUCGBP2qOJT4a8enQ7ej8ttsKvYRBQgtGxXc-gBV2vKo8OIRoZLylDc_5qg1K_QdCTtR51Is2HvUKrBKkj4tukMcipMA0KN80y8Fx7R7S07ghDftGK1O50CKNF2cCBMlJ8k0yhrtMMDggMuzNlGiJ8S4t_KQOcYglRocvkKkc956GgtNPjZb4A83jJ87lD_xgUdyb2IBaEvamctDAnXLCB5Sc"/>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-center mb-3">
+<span class="text-caption font-caption text-primary">Kegiatan Desa</span>
+<span class="text-caption font-caption text-outline">12 Okt 2024</span>
+</div>
+<h3 class="font-title-lg text-title-lg mb-3 leading-tight">Persiapan Festival Budaya Tahunan Selelos</h3>
+<p class="font-body-main text-body-main text-on-surface-variant line-clamp-3 mb-6">Warga Desa Selelos mulai bersiap menyambut festival budaya yang akan dihadiri ribuan wisatawan...</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-bold text-label-bold" href="#">Baca Selengkapnya <span class="material-symbols-outlined text-[18px]">open_in_new</span></a>
+</div>
+</div>
+<!-- News Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col">
+<img class="w-full aspect-[16/9] object-cover" data-alt="High-resolution wide shot of a newly constructed wooden trekking path through the lush forest of Selelos. The path is clean and minimalist, winding through tall tropical trees with dappled sunlight hitting the timber surface. The aesthetic is crystalline and dependable, suggesting safety and high-quality infrastructure for eco-tourism." src="https://lh3.googleusercontent.com/aida/AP1WRLs9_DeVtkkwTK86VrB8MyjSrPFXS2ZjbfjsgIQP9tQGEQvVBPfkoQ9v_jfL1XiuxH-gnFmb_iDjImTxa15oBIh8Sk9TtoLBNYVZL_P9kXYA96_90nN5apSoHonbbIOtxsF7Y5uCieqfjT6g9z5GlHCVx1sHXYWxt8ZRzNfUG3OnUtnwQMBAeeX0A7O-jQXCqbCHkSzC0GckO9ffctBktXtaanjjUGPkq7EgYJwxJZ48ZKlmOmREiTnYwgw"/>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-center mb-3">
+<span class="text-caption font-caption text-primary">Pembangunan</span>
+<span class="text-caption font-caption text-outline">05 Okt 2024</span>
+</div>
+<h3 class="font-title-lg text-title-lg mb-3 leading-tight">Peresmian Jalur Tracking Baru di Puncak Selelos</h3>
+<p class="font-body-main text-body-main text-on-surface-variant line-clamp-3 mb-6">Pemerintah desa meresmikan jalur pendakian baru yang lebih aman dan menawarkan pemandangan spektakuler...</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-bold text-label-bold" href="#">Baca Selengkapnya <span class="material-symbols-outlined text-[18px]">open_in_new</span></a>
+</div>
+</div>
+<!-- News Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant shadow-sm hover:shadow-lg transition-all flex flex-col">
+<img class="w-full aspect-[16/9] object-cover" data-alt="A clean and modern hospitality scene in Desa Selelos, featuring a boutique eco-resort interior with natural wood finishes and views of the surrounding durian orchard through large glass windows. The mood is serene and luxurious yet connected to nature, showcasing the high-end digital interface style for modern travelers." src="https://lh3.googleusercontent.com/aida/AP1WRLsDGay81XK8N0msJ1QchSZ6UkfXzrJjZCXA6ElsKwuNgG7b_bQgcWSvdljVrsI1S9-4TWDYeoKtFiNC10VJq_Kem2nBU7z_M9z8UCqxrDryw4EY1R8XRqbttXdHpDqkyZSa3qFtHirEhAtWtPGh776LmEkYpdnvVdprnuRqhdBb9croVJrPwOgm6Xp03HwYmfcoJoocTQxWSi_VcJO38Pyboqk4Xo_1Yp1B5NyEQ_31bldmSNLvr1D6Mw"/>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-center mb-3">
+<span class="text-caption font-caption text-primary">Penghargaan</span>
+<span class="text-caption font-caption text-outline">28 Sep 2024</span>
+</div>
+<h3 class="font-title-lg text-title-lg mb-3 leading-tight">Desa Selelos Raih Penghargaan Desa Wisata Terbaik</h3>
+<p class="font-body-main text-body-main text-on-surface-variant line-clamp-3 mb-6">Prestasi membanggakan kembali diraih Desa Selelos dalam kategori tata kelola agrowisata berkelanjutan...</p>
+<a class="mt-auto flex items-center gap-2 text-primary font-label-bold text-label-bold" href="#">Baca Selengkapnya <span class="material-symbols-outlined text-[18px]">open_in_new</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-primary rounded-3xl p-12 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md mb-6">Siap untuk Berpetualang?</h2>
+<p class="font-body-main text-body-main mb-8 max-w-xl mx-auto opacity-80">Rencanakan kunjungan Anda sekarang dan rasakan harmoni antara alam dan tradisi di Desa Wisata Selelos.</p>
+<button class="bg-surface-container-lowest text-primary px-10 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 active:scale-95 transition-all shadow-xl">Hubungi Kami Sekarang</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant w-full py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div>
+<h2 class="font-title-lg text-title-lg text-primary mb-6">Desa Selelos</h2>
+<p class="font-body-main text-body-main text-on-surface-variant mb-6">Destinasi wisata unggulan berbasis alam dan budaya di kaki pegunungan yang asri.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">play_circle</span></a>
+</div>
+</div>
+<div class="md:pl-12">
+<h3 class="font-label-bold text-label-bold mb-6 uppercase tracking-wider">Tautan Cepat</h3>
+<ul class="space-y-4">
+<li><a class="font-caption text-caption text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Tentang Kami</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Peta Desa</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Kebijakan Privasi</a></li>
+<li><a class="font-caption text-caption text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Hubungi Kami</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold mb-6 uppercase tracking-wider">Kontak Kami</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-caption text-caption text-on-surface-variant">Jl. Raya Wisata No. 1, Desa Selelos, Kec. Kayangan, KLU, NTB</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-caption text-caption text-on-surface-variant">info@desaselelos.id</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+<span class="font-caption text-caption text-on-surface-variant">+62 812-3456-7890</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-8 border-t border-outline-variant text-center">
+<p class="font-caption text-caption text-on-surface-variant">© 2024 Desa Wisata Selelos. All rights reserved.</p>
+</div>
+</footer>
+<!-- FAB for quick contact -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-secondary-container text-on-secondary-container rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40 group">
+<span class="material-symbols-outlined">chat</span>
+<span class="absolute right-full mr-4 bg-on-surface text-surface text-caption font-caption px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Tanya Kami</span>
+</button>
+<script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('nav-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            
+            if (drawer.classList.contains('-translate-x-full')) {
+                drawer.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.add('opacity-100'), 10);
+            } else {
+                drawer.classList.add('-translate-x-full');
+                overlay.classList.remove('opacity-100');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

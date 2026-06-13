@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detail Wisata - Desa Selelos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#1b6b51",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#8bd6b6",
+                        "on-surface": "#111c2d",
+                        "on-secondary-fixed": "#001e2f",
+                        "tertiary-container": "#4a564f",
+                        "on-secondary-container": "#004666",
+                        "outline": "#6f7973",
+                        "inverse-surface": "#263143",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed": "#d9e6dd",
+                        "tertiary-fixed-dim": "#bdcac1",
+                        "on-primary-fixed": "#002116",
+                        "background": "#f9f9ff",
+                        "on-tertiary-fixed": "#131e19",
+                        "surface-container": "#e7eeff",
+                        "outline-variant": "#bec9c2",
+                        "primary-container": "#065f46",
+                        "primary": "#004532",
+                        "inverse-primary": "#8bd6b6",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf1ff",
+                        "on-primary-fixed-variant": "#00513b",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#d8e3fb",
+                        "secondary": "#006591",
+                        "tertiary": "#333f39",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "on-primary-container": "#8bd6b7",
+                        "secondary-container": "#39b8fd",
+                        "on-surface-variant": "#3f4944",
+                        "surface-dim": "#cfdaf2",
+                        "on-tertiary-fixed-variant": "#3e4943",
+                        "secondary-fixed": "#c9e6ff",
+                        "surface-container-highest": "#d8e3fb",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#dee8ff",
+                        "on-tertiary-container": "#becac2",
+                        "primary-fixed": "#a6f2d1",
+                        "surface-container-low": "#f0f3ff",
+                        "secondary-fixed-dim": "#89ceff",
+                        "on-background": "#111c2d",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Plus Jakarta Sans"],
+                        "body-main": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-md-mobile": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-main text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest shadow-sm border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-primary-container/10 transition-colors active:scale-95 duration-150 rounded-full">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight">Desa Selelos</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 text-primary font-label-bold text-label-bold hover:bg-primary-container/10 transition-colors rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="hidden md:inline">Daftar Wisata</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden shadow-sm">
+<img alt="Admin Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLu070VBirsDhXT6U35VgOWovFxZ71km5VtwKgne8jHt8IbsbXXjRO6Cun7pB6XDj_4J4haxZi5qIWNV_K5l1KneWb3lUmsOvRViJTW-Ar6OLXgZrcqXQt24yTGahN7nxluAv701FF_ynRAQaN8NpDHZno7OAiaAjwY3NNQ2HpVF631Jh-dfpEI5UCU8f-L5efNNk3Mm_-rjkFQPN11M-EqmzmH5xcRIq7JSqE85HPcxsPg13AhfrWOOCeQ"/>
+</div>
+</div>
+</header>
+<main class="pt-16 min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[530px] md:h-[663px] w-full overflow-hidden">
+<img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000" data-alt="A breathtaking view of a majestic multi-tiered waterfall nestled deep within a lush tropical forest of Selelos. Sunlight filters through the dense canopy, creating ethereal rays that illuminate the misty air and vibrant green moss-covered rocks. The crystal-clear water pools into a turquoise basin at the bottom. The atmosphere is serene and humid, capturing the raw, untouched natural beauty of a hidden Indonesian paradise in soft morning light." src="https://lh3.googleusercontent.com/aida/AP1WRLsglyl4qWu1z6lo7hfa86OfvJ8Y7PKyX0aE3K6Vc_Hnut--VNd4UpfePrEOzRS5phNRgH2zThpF5c0rNf7acWSwwzSJJFneOI_GgIHKll35PukwaMxNWtfq6g9Vtz_OfQCLm6dpDO8LkXh2tAcfe8AbOGrgt5c1kJFmz4GX8l-zD3oVHV358aNERRBL_L15991ILQWQ1NDlYx77PhR8qkGzEAhyynTRQF-m9BQCbpkoqze6AuH5lj_Bg3M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full px-margin-mobile md:px-margin-desktop pb-12 animate-fade-in">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-label-bold font-label-bold shadow-lg">Alam &amp; Petualangan</span>
+<span class="px-4 py-1.5 bg-primary-container text-on-primary-container rounded-full text-label-bold font-label-bold shadow-lg">Favorit Pengunjung</span>
+</div>
+<h1 class="text-white font-display-lg text-display-lg-mobile md:text-display-lg mb-2">Air Terjun Kelambu</h1>
+<p class="text-white/90 text-title-lg font-title-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                        Dusun Selelos Tengah, Desa Selelos
+                    </p>
+</div>
+</div>
+</section>
+<!-- Content Grid -->
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Description & Gallery -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Description -->
+<article class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_4px_20px_rgba(6,95,70,0.08)] border border-outline-variant/30">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Deskripsi Destinasi</h2>
+<div class="space-y-4 text-on-surface-variant leading-relaxed text-body-main font-body-main">
+<p>
+                                Tersembunyi di balik rimbunnya hutan tropis Desa Selelos, Air Terjun Kelambu menawarkan pemandangan yang tak tertandingi. Nama "Kelambu" sendiri diambil dari bentuk jatuhnya air yang melebar dan tipis menyerupai kelambu atau tirai putih yang menawan. Berbeda dengan air terjun pada umumnya yang jatuh secara vertikal tajam, air di sini mengalir melalui tebing batu berlumut yang landai, menciptakan simfoni visual yang sangat menenangkan.
+                            </p>
+<p>
+                                Udara di sekitar destinasi ini sangat segar dengan suhu yang cenderung sejuk bahkan di siang hari. Vegetasi di sekelilingnya masih sangat terjaga, memberikan perlindungan alami bagi berbagai flora dan fauna endemik. Pengunjung seringkali dapat mendengar kicauan burung hutan yang bersahutan dengan deru air terjun yang lembut.
+                            </p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 py-6">
+<div class="flex flex-col items-center p-4 bg-surface rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">thermostat</span>
+<span class="text-label-bold font-label-bold">Suhu 22°C</span>
+</div>
+<div class="flex flex-col items-center p-4 bg-surface rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">hiking</span>
+<span class="text-label-bold font-label-bold">Trek Sedang</span>
+</div>
+<div class="flex flex-col items-center p-4 bg-surface rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">photo_camera</span>
+<span class="text-label-bold font-label-bold">Instagenic</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Gallery Bento Grid -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">Galeri Foto</h2>
+<button class="text-primary font-label-bold text-label-bold flex items-center gap-1 hover:underline">
+                                Lihat Semua <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-4 grid-rows-2 gap-4 h-[500px]">
+<div class="col-span-2 row-span-2 rounded-xl overflow-hidden shadow-lg group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A close-up shot of crystal-clear water cascading over dark, mossy rocks at the base of a tropical waterfall in Selelos. The water is churning into a soft white foam, creating small splashes that catch the sunlight. The deep green of the surrounding jungle foliage is visible in the background, providing a rich, natural contrast. The focus is sharp on the flowing water, capturing its dynamic movement in a serene, natural environment." src="https://lh3.googleusercontent.com/aida/AP1WRLvkvNYDah94DXBKMhxjvOU2XT9sF0sRWGHkZVmEzhH6_XWWVzrOFZl14KFVYwuhxa8CYpm4WwSMmy6ZrwN5BBC_tRANLHw2EspE7i2GaqxnCD2LQPgqzpNrjoQRu1FaaQLhLbwg5eLb3YOLbYJRPW-TEN0U5HPPB09ZHz0wiq1oobxiLIaTNfb0NK7mLAZvJisUjzNFWDppPH6nhtCooQ-CFZW4CdOZRtcmPPq92rgP4mMS3eZluM6R-Xs"/>
+</div>
+<div class="col-span-2 row-span-1 rounded-xl overflow-hidden shadow-lg group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A wide-angle landscape shot of the dense tropical rainforest surrounding the Selelos tourism area. The canopy is a vibrant mix of emerald and jade greens, with ancient trees towering over a misty valley. The lighting is soft and diffused, as if shortly after a light rain, highlighting the moisture on the leaves and creating a tranquil, mysterious atmosphere typical of high-altitude jungle settings in Indonesia." src="https://lh3.googleusercontent.com/aida/AP1WRLuxgDa2rpNqeALs2AZWOlBUDrn76G_Fv83FOAaEHnUq5FLuexkCHPpPsX-Ld2s6ozLAhcGX-E9h4bmkvAOqA9gZDv0ORR5oYtzQoqVPEmv7opHHndX7EdPuzBu0YNKk1CA7j-4N7_dGWnVOd8uQEyGrzE0W3ZTuyQvsROREAHUkDRS6wnrh9Sz-TaXevmQEEJmIoGDs_Yl9TdetXDeGqPnhTnVSuljyuhbUwU-rAyyqlaSxKsgHn7fMsl8"/>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden shadow-lg group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A detailed shot of local flora in the Selelos forest, featuring a giant tropical fern leaf with intricate patterns. The leaf is dew-covered, with tiny droplets reflecting the surrounding greenery. The background is a soft bokeh of forest textures, maintaining a focus on the delicate natural architecture of the plant. The overall color palette is dominated by deep, healthy greens and earthy browns, suggesting a pristine ecological environment." src="https://lh3.googleusercontent.com/aida/AP1WRLtHU3WcpUC99ZwGpKf8NRFYzvt1vbGMqgAgZ2h8anSHYCrVjZEpNPAhKR4PyJ0I6gXgDp92esXxqJwI-KCm7dxUXFITS40Z3tlLXgBakbki6lMqVNP-H0k6bd4daSTFPbmZYoxBSVF-7H0BFJH_jOAbY0PVguweHVpiCfs_aXqPXepu07pgtWF2gRTVccwXf6azh6ER9K8SUAnRskASXGzvMvR6SA9e1ex8bY0mPyJeF2u7vCbHrx8BxMY"/>
+</div>
+<div class="col-span-1 row-span-1 rounded-xl overflow-hidden shadow-lg group relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Sunbeams piercing through a dense forest canopy in Selelos, creating long, straight lines of light that hit the forest floor covered in fallen leaves and ferns. The air is slightly misty, emphasizing the light paths. The scene is quiet and spiritual, capturing the 'woodland cathedral' effect common in old-growth tropical forests during the early morning hours. The tones are warm where the light hits and cool in the shadows." src="https://lh3.googleusercontent.com/aida/AP1WRLsJQeRYABOAbj2AK1LME32LZZ7w-lsTo8qY3OVUlartip2DG8A0lMhKIBWUYL9f8WdRCjCcUIAlm7GlugAZZzXLsKOHcIQQ-Ywnq3p88RCfQmY0Wb6Ics4id4jzzUp8RUG9EAZ40SA4jh28XTkKNTfAe1-skqMYJD7l5-4AD8PYWIFR19OQVwY2oDGcQ-cM0PGUaOyGohdTy0xFd5WJLnHe_Z7wyrA5eX7CF3qe9IF8VUk415Hped900Q"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center pointer-events-none">
+<span class="text-white font-title-lg text-title-lg">+12 Foto</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Location & Info Card -->
+<aside class="lg:col-span-4 space-y-6">
+<!-- Access Info -->
+<div class="bg-surface-container-high p-6 rounded-xl border border-outline-variant/30 sticky top-24">
+<h3 class="font-title-lg text-title-lg text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">info</span>
+                            Informasi &amp; Akses
+                        </h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">directions_car</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Akses Jalan</p>
+<p class="text-body-main text-on-surface-variant text-sm">Dapat diakses dengan mobil/motor hingga parkiran utama. Dilanjutkan jalan kaki 15 menit.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Jam Buka</p>
+<p class="text-body-main text-on-surface-variant text-sm">Setiap Hari: 08.00 - 17.00 WITA</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">payments</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface">Tiket Masuk</p>
+<p class="text-body-main text-on-surface-variant text-sm">Rp 10.000 / orang (Sudah termasuk parkir)</p>
+</div>
+</div>
+<hr class="border-outline-variant/30"/>
+<!-- Map Placeholder -->
+<div class="space-y-3">
+<p class="font-label-bold text-label-bold text-on-surface">Peta Lokasi</p>
+<div class="w-full h-48 rounded-lg overflow-hidden relative border border-outline-variant">
+<img class="w-full h-full object-cover" data-location="Selelos, Lombok Utara, Indonesia" src="https://lh3.googleusercontent.com/aida/AP1WRLsslX1HKNn0__5XEhoTObGhWJBQKmL07Jmo_ZiAsbX1CTW03RXNLb-ZlA6g4z7Bu8IRIfpv9pwIrn_NxayfuUoqujB06FWLn7kJZyFLqHMNO410-TEEXO19zaN98l7FfvvE0tMWLEMiJ-p6COGG4Wc4LIz_d4kMHFQY9dAQTppw-GRkaDJQEIQ4eQkPqJNaETvs4p44VMPeroS1R1i5QS56fK9yzan9shWwi3NQDuYRIL1RZWCNu3m2WGs"/>
+<div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+<div class="bg-surface p-2 rounded-lg shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-caption font-caption">Buka di Google Maps</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold hover:bg-primary/90 transition-all active:scale-[0.98] shadow-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">map</span>
+                                Petunjuk Arah
+                            </button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Back Button Section -->
+<div class="mt-16 flex justify-center">
+<button class="px-8 py-3 border-2 border-primary text-primary rounded-full font-bold flex items-center gap-2 hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Kembali ke Daftar Wisata
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant py-12">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-4">
+<h3 class="font-title-lg text-title-lg text-primary">Desa Wisata Selelos</h3>
+<p class="text-on-surface-variant text-caption font-caption leading-relaxed">
+                    Mengenalkan keindahan alam dan kearifan lokal Desa Selelos kepada dunia. Nikmati ketenangan dan petualangan di jantung hutan tropis.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-bold text-label-bold text-on-surface">Tautan Penting</h4>
+<a class="text-on-surface-variant font-caption text-caption hover:text-primary transition-colors" href="#">Tentang Kami</a>
+<a class="text-on-surface-variant font-caption text-caption hover:text-primary transition-colors" href="#">Peta Desa</a>
+<a class="text-on-surface-variant font-caption text-caption hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant font-caption text-caption hover:text-primary transition-colors" href="#">Hubungi Kami</a>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">Ikuti Kami</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-variant/50 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant/50 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+<p class="text-on-surface-variant text-caption font-caption mt-8">
+                    © 2024 Desa Wisata Selelos. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for Header
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('glass-effect');
+                header.classList.remove('bg-surface-container-lowest');
+            } else {
+                header.classList.remove('glass-effect');
+                header.classList.add('bg-surface-container-lowest');
+            }
+        });
+
+        // Hover effect for gallery
+        const galleryItems = document.querySelectorAll('.group');
+        galleryItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('img').style.transform = 'scale(1.1)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('img').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

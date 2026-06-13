@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kontak - Desa Wisata Selelos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f9f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#1b6b51",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#8bd6b6",
+                    "on-surface": "#111c2d",
+                    "on-secondary-fixed": "#001e2f",
+                    "tertiary-container": "#4a564f",
+                    "on-secondary-container": "#004666",
+                    "outline": "#6f7973",
+                    "inverse-surface": "#263143",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed": "#d9e6dd",
+                    "tertiary-fixed-dim": "#bdcac1",
+                    "on-primary-fixed": "#002116",
+                    "background": "#f9f9ff",
+                    "on-tertiary-fixed": "#131e19",
+                    "surface-container": "#e7eeff",
+                    "outline-variant": "#bec9c2",
+                    "primary-container": "#065f46",
+                    "primary": "#004532",
+                    "inverse-primary": "#8bd6b6",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#ecf1ff",
+                    "on-primary-fixed-variant": "#00513b",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#d8e3fb",
+                    "secondary": "#006591",
+                    "tertiary": "#333f39",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "on-primary-container": "#8bd6b7",
+                    "secondary-container": "#39b8fd",
+                    "on-surface-variant": "#3f4944",
+                    "surface-dim": "#cfdaf2",
+                    "on-tertiary-fixed-variant": "#3e4943",
+                    "secondary-fixed": "#c9e6ff",
+                    "surface-container-highest": "#d8e3fb",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#dee8ff",
+                    "on-tertiary-container": "#becac2",
+                    "primary-fixed": "#a6f2d1",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary-fixed-dim": "#89ceff",
+                    "on-background": "#111c2d",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "40px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "caption": ["Plus Jakarta Sans"],
+                    "body-main": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-md-mobile": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-main": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "title-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "600"}],
+                    "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-dim fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center gap-4">
+<button class="text-primary hover:bg-primary-container/10 transition-colors p-2 rounded-full active:scale-95 duration-150 lg:hidden" id="menuButton">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-inverse-primary tracking-tight">Desa Selelos</h1>
+</div>
+<!-- Desktop Nav Links -->
+<div class="hidden lg:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold hover:text-primary transition-colors" href="#">Beranda</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold hover:text-primary transition-colors" href="#">Profil Desa</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-container font-label-bold text-label-bold hover:text-primary transition-colors" href="#">Wisata</a>
+<a class="text-primary dark:text-primary-fixed font-bold font-label-bold text-label-bold" href="#">Kontak</a>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed overflow-hidden">
+<img alt="Admin Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvGEVN7HlXom53_Vc3JWbsYq32mnW12K5NRUxwALs8y9AivxgytxQXvDCkhCwY6O_BdMQyrZlX6HdAV70o2xlLdIgOgEqLT6rBhsowNvzTjbvhZfBbwWa10N1R6dQpfRa8yVzWuZu1d6bGrnj5tATnwbz8H5JeLOZUlWTi646If8HDEfAUREzCCjIoKLYfHU5t_J7ugNwtDOFDolu69pN0o-XEjPQeUsQLb69Z8nRQyajIb-Huh88haNb0"/>
+</div>
+</div>
+</nav>
+<!-- Mobile Navigation Drawer (Hidden by default) -->
+<div class="fixed inset-0 bg-black/50 z-[55] opacity-0 pointer-events-none transition-opacity duration-300" id="drawerOverlay"></div>
+<aside class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 rounded-r-xl bg-surface dark:bg-surface-dim shadow-lg -translate-x-full transition-transform duration-300 ease-in-out" id="navDrawer">
+<div class="p-6 flex flex-col gap-6">
+<h2 class="font-headline-md text-headline-md text-primary">Desa Selelos</h2>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-label-bold">Beranda</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-label-bold text-label-bold">Profil Desa</span>
+</a>
+<a class="text-on-surface-variant dark:text-surface-variant mx-2 px-4 py-3 flex items-center gap-4 hover:bg-surface-variant/50 transition-all rounded-full" href="#">
+<span class="material-symbols-outlined">forest</span>
+<span class="font-label-bold text-label-bold">Wisata</span>
+</a>
+<a class="bg-primary-container text-on-primary-container rounded-full mx-2 px-4 py-3 flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-label-bold text-label-bold">Kontak</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="pt-24 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+<!-- Hero Section -->
+<div class="mb-12 text-center lg:text-left">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Hubungi Kami</h2>
+<p class="font-body-main text-body-main text-on-surface-variant max-w-2xl">Punya pertanyaan seputar kunjungan ke Desa Selelos? Kami siap membantu merencanakan perjalanan petualangan Anda di alam tropis kami.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Contact Info Panel (Bento Style) -->
+<div class="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+<!-- Address Card -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Lokasi Desa</h3>
+<p class="font-body-main text-body-main text-on-surface-variant">Jalan Raya Selelos, Kec. Gangga, Kabupaten Lombok Utara, Nusa Tenggara Barat.</p>
+</div>
+<!-- Call & Email Card -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow group">
+<div class="flex flex-col gap-6">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container/10 flex items-center justify-center text-secondary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_in_talk</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-secondary mb-1">Telepon</h3>
+<p class="font-body-main text-body-main text-on-surface-variant">+62 812-3456-7890</p>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-1">Email</h3>
+<p class="font-body-main text-body-main text-on-surface-variant">info@selelos-village.com</p>
+</div>
+</div>
+</div>
+<!-- Social Media -->
+<div class="bg-primary text-on-primary p-8 rounded-xl shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-title-lg text-title-lg mb-6">Ikuti Jejak Kami</h3>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">videocam</span>
+</a>
+</div>
+</div>
+<!-- Decorative Circle -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-on-primary/10 rounded-full blur-2xl"></div>
+</div>
+</div>
+<!-- Form & Map Section -->
+<div class="lg:col-span-7 space-y-gutter">
+<!-- Contact Form -->
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl shadow-[0px_4px_20px_rgba(6,95,70,0.08)] border border-outline-variant">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">Kirim Pesan</h3>
+<form class="space-y-6" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Nama Lengkap</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all font-body-main text-body-main" placeholder="Masukkan nama Anda" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Alamat Email</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all font-body-main text-body-main" placeholder="nama@email.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Pesan</label>
+<textarea class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all font-body-main text-body-main resize-none" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto px-10 py-4 bg-primary text-on-primary font-label-bold text-label-bold rounded-lg shadow-md hover:shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2" type="submit">
+<span>Kirim Pesan</span>
+<span class="material-symbols-outlined text-body-main">send</span>
+</button>
+</form>
+</div>
+<!-- Interactive Map Placeholder -->
+<div class="relative h-[400px] rounded-xl overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A detailed aerial view of a lush tropical mountain village in Lombok Indonesia featuring vibrant green forest canopies and misty waterfalls in the background. The scene is illuminated by the soft golden light of a setting sun creating long shadows and highlighting the serene natural environment. The visual style is crisp and professional with a focus on high-legibility and a calming tropical clean aesthetic that matches the brand identity." src="https://lh3.googleusercontent.com/aida/AP1WRLsh06U0c1SgpxA8hLWcr13aHjps7TOrDHyyygx8Ef9vXwYagselWgLhDxEY-Dzv9Kx4w12PSCibXLZgZK0sZDxosQd-XU6mv5DQ23dt9N134zKs0aTl1dK0kup8yXeUGQftXXv58UF2cXwKZKs8PxIOoSdTyDtfAKFY_u3Pq57rPAKN6RsgBW57laFsgnS5OLfXxmiUaPvZAuXkNFnyyZRFbbcOHIER4s157XqS0aaPngE7qOaZNrCDRc0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
+<div class="glass-effect p-4 rounded-lg flex items-center gap-4 border border-white/20">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">map</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary">Lihat di Google Maps</p>
+<p class="text-caption font-caption text-on-surface-variant">Desa Wisata Selelos, Lombok Utara</p>
+</div>
+</div>
+</div>
+<div class="hidden" data-location="Lombok Utara, Indonesia" style=""></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant py-12">
+<div class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-4">
+<h3 class="font-title-lg text-title-lg text-primary">Desa Selelos</h3>
+<p class="font-caption text-caption text-on-surface-variant">Pusat informasi resmi pariwisata Desa Selelos. Nikmati keindahan alam air terjun dan keramahtamahan warga lokal.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">Tautan Cepat</h4>
+<div class="flex flex-col gap-2">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Tentang Kami</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Peta Desa</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="font-caption text-caption text-primary underline" href="#">Hubungi Kami</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">Hak Cipta</h4>
+<p class="font-caption text-caption text-on-surface-variant">© 2024 Desa Wisata Selelos. All rights reserved.</p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-on-surface-variant">eco</span>
+<span class="material-symbols-outlined text-on-surface-variant">travel_explore</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Drawer Logic
+        const menuButton = document.getElementById('menuButton');
+        const navDrawer = document.getElementById('navDrawer');
+        const drawerOverlay = document.getElementById('drawerOverlay');
+
+        function toggleDrawer() {
+            navDrawer.classList.toggle('-translate-x-full');
+            drawerOverlay.classList.toggle('opacity-0');
+            drawerOverlay.classList.toggle('pointer-events-none');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuButton.addEventListener('click', toggleDrawer);
+        drawerOverlay.addEventListener('click', toggleDrawer);
+
+        // Form Submission Interaction
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Mengirim...';
+            
+            setTimeout(() => {
+                btn.classList.replace('bg-primary', 'bg-secondary');
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Terkirim!';
+                contactForm.reset();
+                
+                setTimeout(() => {
+                    btn.classList.replace('bg-secondary', 'bg-primary');
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Sticky Header effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-surface-container-lowest', 'glass-effect');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('glass-effect', 'bg-surface-container-lowest');
+            }
+        });
+    </script>
+</body></html>
