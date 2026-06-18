@@ -90,14 +90,14 @@ export async function GET() {
       INSERT INTO destinasi (name, category, description, image_url, location, rating, open_hours, ticket_price)
       VALUES 
       -- Wisata (Attractions)
-      ('Air Terjun Gangga', 'Wisata', 'Pesona air terjun kembar yang menakjubkan jatuh dari tebing tinggi di tengah pelukan hutan hujan yang rimbun. Keasrian alam sekitarnya memberikan ketenangan absolut.', 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80', 'Kayangan, Lombok Utara', 4.9, '07:30 - 17:30', 10000),
+      ('Air Terjun Tiu Saong', 'Wisata', 'Pesona air terjun kembar yang menakjubkan jatuh dari tebing tinggi di tengah pelukan hutan hujan yang rimbun. Keasrian alam sekitarnya memberikan ketenangan absolut.', 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80', 'Kayangan, Lombok Utara', 4.9, '07:30 - 17:30', 10000),
       ('Puncak Pegunungan Selelos', 'Wisata', 'Menyajikan pemandangan spektakuler perbukitan hijau yang diselimuti kabut tebal di pagi hari. Nikmati sensasi matahari terbit dengan latar belakang Gunung Rinjani yang megah.', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80', 'Kayangan, Lombok Utara', 4.8, '24 Jam', 5000),
       ('Kampung Adat Sasak', 'Wisata', 'Jelajahi keaslian pemukiman tradisional Sasak. Saksikan arsitektur rumah bambu beratap jerami kuno, kearifan lokal masyarakat, serta ritual tari adat Sasak yang sakral.', 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80', 'Desa Selelos, Lombok Utara', 4.7, '08:00 - 18:00', 15000),
 
       -- Homestays
       ('Selelos Eco Lodge', 'Homestay', 'Penginapan ramah lingkungan yang dibangun dari bambu lokal dengan pemandangan langsung ke perkebunan kopi yang asri.', 'https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=80', 'Desa Selelos', 4.9, 'Resepsionis 24 Jam', 350000),
       ('Rinjani View Homestay', 'Homestay', 'Terletak di ketinggian lereng bukit, menawarkan udara sejuk pegunungan dan panorama indah matahari terbit langsung dari jendela kamar.', 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80', 'Puncak Selelos', 4.8, 'Resepsionis 24 Jam', 280000),
-      ('Gangga Falls Homestay', 'Homestay', 'Hanya berjarak 5 menit berjalan kaki ke air terjun kembar, penginapan ini menawarkan melodi suara gemercik air yang menenangkan.', 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80', 'Kawasan Air Terjun', 4.7, 'Resepsionis 24 Jam', 250000),
+      ('Tiu Saong Falls Homestay', 'Homestay', 'Hanya berjarak 5 menit berjalan kaki ke air terjun kembar, penginapan ini menawarkan melodi suara gemercik air yang menenangkan.', 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80', 'Kawasan Air Terjun', 4.7, 'Resepsionis 24 Jam', 250000),
       ('Sasak Village Stay', 'Homestay', 'Rasakan pengalaman unik menginap langsung di rumah adat tradisional Sasak bersama keluarga lokal desa yang hangat.', 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80', 'Kampung Adat', 4.6, 'Resepsionis 24 Jam', 200000),
 
       -- Pengalaman (Experiences)
