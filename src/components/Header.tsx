@@ -28,7 +28,6 @@ export default function Header() {
     { name: 'Profil', href: '/profil' },
     { name: 'Lestari', href: '/lestari' },
     { name: 'Wisata', href: '/wisata' },
-    { name: 'Berita', href: '/berita' },
     { name: 'Galeri', href: '/galeri' },
     { name: 'Kontak', href: '/kontak' },
   ];

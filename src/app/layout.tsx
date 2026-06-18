@@ -14,7 +14,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Desa Wisata Selelos - Mountain Stays, Reimagined",
+  title: "Go Slelos",
   description: "Official Tourism Portal of Desa Selelos, Lombok Utara. Experience raw mountain hikes, local coffee harvests, Sasak traditional homestays, and pristine nature.",
 };
 
