@@ -8,7 +8,11 @@ export async function GET() {
     await sql`DROP TABLE IF EXISTS berita;`;
     await sql`DROP TABLE IF EXISTS galeri;`;
     await sql`DROP TABLE IF EXISTS pesan;`;
-    await sql`DROP TABLE IF EXISTS users;`;
+    try {
+      await sql`DROP TABLE IF EXISTS users;`;
+    } catch (e) {
+      console.log('Skipping users table drop due to foreign key dependencies:', e);
+    }
 
     // 1. Create Users Table
     await sql`
@@ -80,10 +84,22 @@ export async function GET() {
     // --- SEED DATA ---
 
     // Seed Admin User
-    await sql`
-      INSERT INTO users (name, email, password, role)
-      VALUES ('Administrator Selelos', 'admin@selelos.go.id', 'admin123', 'admin');
-    `;
+    try {
+      if (process.env.POSTGRES_URL) {
+        await sql`
+          INSERT INTO users (name, email, password, role)
+          VALUES ('Administrator Selelos', 'admin@selelos.go.id', 'admin123', 'admin')
+          ON CONFLICT (email) DO NOTHING;
+        `;
+      } else {
+        await sql`
+          INSERT INTO users (name, email, password, role)
+          VALUES ('Administrator Selelos', 'admin@selelos.go.id', 'admin123', 'admin');
+        `;
+      }
+    } catch (e) {
+      console.log('Skipping admin user seed because it might already exist:', e);
+    }
 
     // Seed Stays/Experiences/Attractions in Destinasi Table
     await sql`
