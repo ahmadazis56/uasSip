@@ -34,7 +34,7 @@ export default async function Home() {
             <img 
               className="w-full h-full object-cover" 
               alt="Desa Selelos"
-              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80"
+              src="/aset/carousel.png"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent"></div>
           </div>

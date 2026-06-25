@@ -71,7 +71,7 @@ export default function KontakPage() {
                     <span className="material-symbols-outlined text-secondary text-base mt-0.5">location_on</span>
                     <div>
                       <p className="font-bold text-on-surface">Kantor Pelayanan Desa</p>
-                      <p>Jl. Raya Wisata No. 1, Desa Selelos, Kec. Kayangan, Lombok Utara, NTB</p>
+                      <p>Jl. Raya Pekatan, Desa Selelos, Kec. Tanjung, Lombok Utara, NTB</p>
                     </div>
                   </div>
 
@@ -87,7 +87,7 @@ export default function KontakPage() {
                     <span className="material-symbols-outlined text-secondary text-base mt-0.5">call</span>
                     <div>
                       <p className="font-bold text-on-surface">Layanan Telepon/WhatsApp</p>
-                      <p>+62 812-3456-7890</p>
+                      <p>00000000000000</p>
                     </div>
                   </div>
                 </div>

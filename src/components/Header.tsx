@@ -117,7 +117,7 @@ export default function Header() {
       >
         <div className="p-6 border-b border-surface-container flex justify-between items-center bg-surface-container-low">
           <div>
-            <h2 className="font-serif font-bold text-lg text-primary">Desa Selelos</h2>
+            <h2 className="font-serif font-bold text-lg text-primary">Go Selelos</h2>
             <p className="text-[9px] text-on-surface-variant font-medium tracking-wider uppercase">Lombok Utara</p>
           </div>
           <button className="text-on-surface p-1 hover:bg-surface-container rounded-full" onClick={toggleDrawer}>

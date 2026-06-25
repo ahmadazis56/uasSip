@@ -106,7 +106,7 @@ export async function GET() {
       INSERT INTO destinasi (name, category, description, image_url, location, rating, open_hours, ticket_price)
       VALUES 
       -- Wisata (Attractions)
-      ('Air Terjun Tiu Saong', 'Wisata', 'Pesona air terjun kembar yang menakjubkan jatuh dari tebing tinggi di tengah pelukan hutan hujan yang rimbun. Keasrian alam sekitarnya memberikan ketenangan absolut.', 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80', 'Kayangan, Lombok Utara', 4.9, '07:30 - 17:30', 10000),
+      ('Air Terjun Tiu Saong', 'Wisata', 'Pesona air terjun kembar yang menakjubkan jatuh dari tebing tinggi di tengah pelukan hutan hujan yang rimbun. Keasrian alam sekitarnya memberikan ketenangan absolut.', '/aset/waterfall-dashboard.jpeg', 'Kayangan, Lombok Utara', 4.9, '07:30 - 17:30', 10000),
       ('Puncak Pegunungan Selelos', 'Wisata', 'Menyajikan pemandangan spektakuler perbukitan hijau yang diselimuti kabut tebal di pagi hari. Nikmati sensasi matahari terbit dengan latar belakang Gunung Rinjani yang megah.', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80', 'Kayangan, Lombok Utara', 4.8, '24 Jam', 5000),
       ('Kampung Adat Sasak', 'Wisata', 'Jelajahi keaslian pemukiman tradisional Sasak. Saksikan arsitektur rumah bambu beratap jerami kuno, kearifan lokal masyarakat, serta ritual tari adat Sasak yang sakral.', 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80', 'Desa Selelos, Lombok Utara', 4.7, '08:00 - 18:00', 15000),
 
@@ -119,7 +119,7 @@ export async function GET() {
       -- Pengalaman (Experiences)
       ('Panen Kopi Organik', 'Pengalaman', 'Ikut serta memetik biji kopi robusta/arabika berkualitas dari kebun lereng gunung dan belajar cara menyangrai kopi khas Sasak.', 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80', 'Kebun Kopi Selelos', 4.9, '08:00 - 12:00', 50000),
       ('Kerajinan Tenun Songket', 'Pengalaman', 'Belajar teknik menenun benang katun warna-warni menggunakan alat tenun kayu tradisional Sasak langsung dari para wanita penenun.', 'https://images.unsplash.com/photo-1513829096970-e4d8e3fdc5b6?auto=format&fit=crop&w=800&q=80', 'Pondok Tenun Desa', 4.8, '09:00 - 15:00', 45000),
-      ('Agrowisata Durian', 'Pengalaman', 'Tur kebun durian pegunungan berpohon tua. Nikmati buah durian creamy legit manis-pahit yang segar langsung setelah jatuh dari pohon.', 'https://images.unsplash.com/photo-1590086782957-93c06ef21604?auto=format&fit=crop&w=800&q=80', 'Orchard Durian Selelos', 4.9, '10:00 - 16:00', 75000),
+      ('Agrowisata Durian', 'Pengalaman', 'Tur kebun durian pegunungan berpohon tua. Nikmati buah durian creamy legit manis-pahit yang segar langsung setelah jatuh dari pohon.', '/aset/duren-dashboard.png', 'Orchard Durian Selelos', 4.9, '10:00 - 16:00', 75000),
       ('Konservasi Adopsi Pohon', 'Pengalaman', 'Dukung pelestarian hutan adat dengan menanam bibit pohon lokal atas nama Anda sendiri untuk menjaga kestabilan mata air pegunungan.', 'https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=800&q=80', 'Hutan Adat Selelos', 4.7, '08:00 - 11:00', 30000);
     `;
 
@@ -136,11 +136,11 @@ export async function GET() {
     await sql`
       INSERT INTO galeri (title, category, image_url, description)
       VALUES 
-      ('Air Terjun Kembar', 'Alam', 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80', 'Aliran air segar di pagi hari yang menyejukkan.'),
+      ('Air Terjun Kembar', 'Alam', '/aset/waterfall-dashboard.jpeg', 'Aliran air segar di pagi hari yang menyejukkan.'),
       ('Pagi Berembun', 'Alam', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80', 'Kabut tebal menyelimuti puncak bukit di Selelos.'),
       ('Tenun Tradisional Sasak', 'Budaya', 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80', 'Proses pembuatan kain songket khas Lombok oleh warga lokal.'),
       ('Festival Musik Gendang Beleq', 'Budaya', 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80', 'Kemeriahan pembukaan pesta adat budaya tahunan.'),
-      ('Agrowisata Durian Selelos', 'Kegiatan', 'https://images.unsplash.com/photo-1590086782957-93c06ef21604?auto=format&fit=crop&w=800&q=80', 'Wisatawan menikmati durian lokal lezat langsung dari pohonnya.'),
+      ('Agrowisata Durian Selelos', 'Kegiatan', '/aset/duren-dashboard.png', 'Wisatawan menikmati durian lokal lezat langsung dari pohonnya.'),
       ('Panen Kopi Organik', 'Kegiatan', 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80', 'Biji kopi lereng pegunungan diproses pasca panen.');
     `;
 
